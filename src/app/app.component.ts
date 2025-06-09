@@ -9,5 +9,6 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  
   title = 'porfolio';
 }
