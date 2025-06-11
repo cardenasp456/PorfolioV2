@@ -1,53 +1,26 @@
-<div class="card flex justify-center">
+<!-- <div class="card flex justify-center">
     <p-button label="Check" (click)="toggleDarkMode()" />
-</div>
+</div> -->
 
-<header class="header" id="header">
-    <nav class="nav container">
-        <a routerLink="/" class="nav__logo">David Cardenas</a>
+<!-- header.component.html -->
+<nav class="nav-container" role="navigation" aria-label="Main Navigation">
+  <div class="logo">DAVID CARDENAS</div>
 
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list grid">
-                <li class="nav__item">
-                    <a routerLink="/#home" class="nav__link active-link">
-                        <i class="uil uil-estate nav__icon"></i>Home
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a routerLink="/#about" class="nav__link">
-                        <i class="uil uil-user nav__icon"></i>About
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a routerLink="/#skills" class="nav__link">
-                        <i class="uil uil-file-alt nav__icon"></i>Skills
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a routerLink="/#services" class="nav__link">
-                        <i class="uil uil-briefcase nav__icon"></i>Services
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a routerLink="/#portfolio" class="nav__link">
-                        <i class="uil uil-scenery nav__icon"></i>Portfolio
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a routerLink="/#contact" class="nav__link">
-                        <i class="uil uil-message nav__icon"></i>Contact
-                    </a>
-                </li>
-            </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
-        </div>
+  <!-- Hamburger Icon -->
+  <div class="hamburger" (click)="toggleMenu()" aria-label="Menu">
+    &#9776;
+  </div>
 
-        <div class="nav__btns">
-            <!-- Theme change button -->
-            <i class="uil uil-moon change-theme" id="theme-button" (click)="toggleDarkMode()"></i>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
-        </div>
-    </nav>
-</header>
+  <!-- Navigation Links -->
+  <ul [class.active]="menuOpen" class="nav-menu">
+    <li><a routerLink="/" routerLinkActive="active">{{ 'HOME' | translate }}</a></li>
+    <li><a routerLink="/about">{{ 'ABOUT' | translate }}</a></li>
+    <li><a routerLink="/work">{{ 'WORK' | translate }}</a></li>
+    <li><a routerLink="/blog">{{ 'BLOG' | translate }}</a></li>
+    <li><a routerLink="/more">{{ 'MORE' | translate }}</a></li>
+    <li><a routerLink="/contact" class="book-call">{{ 'BOOK_CALL' | translate }}</a></li>
+    <li>
+      <button (click)="switchLang()" class="lang-btn">{{ currentLang === 'en' ? 'ES' : 'EN' }}</button>
+    </li>
+  </ul>
+</nav>
