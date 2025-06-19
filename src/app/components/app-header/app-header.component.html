@@ -14,10 +14,10 @@
   <!-- Navigation Links -->
   <ul [class.active]="menuOpen" class="nav-menu">
     <li><a routerLink="/" routerLinkActive="active">{{ 'HOME' | translate }}</a></li>
-    <li><a routerLink="/about">{{ 'ABOUT' | translate }}</a></li>
+    <!-- <li><a routerLink="/about">{{ 'ABOUT' | translate }}</a></li>
     <li><a routerLink="/work">{{ 'WORK' | translate }}</a></li>
     <li><a routerLink="/blog">{{ 'BLOG' | translate }}</a></li>
-    <li><a routerLink="/more">{{ 'MORE' | translate }}</a></li>
+    <li><a routerLink="/more">{{ 'MORE' | translate }}</a></li> -->
     <li><a routerLink="/contact" class="book-call">{{ 'BOOK_CALL' | translate }}</a></li>
     <li>
       <button (click)="switchLang()" class="lang-btn">{{ currentLang === 'en' ? 'ES' : 'EN' }}</button>

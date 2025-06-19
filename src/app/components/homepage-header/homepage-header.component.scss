@@ -1,0 +1,107 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem;
+    color: #ffffff;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;       /* Hace la imagen circular */
+  object-fit: cover;        /* Ajusta el contenido para que no se deforme */
+  margin: 0 8px;            /* Espacio alrededor */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  vertical-align: middle;   /* Alinea con el texto */
+  border: 1.5px solid #ffffff33; /* Borde semitransparente como en el ejemplo */
+  vertical-align: middle;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 em {
+  font-family: 'Georgia', serif; /* O una fuente elegante que contraste */
+  font-style: italic;
+  font-weight: 500;
+  color: #d6d6d6;
+}
+
+.line-break {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; // Espacio opcional entre los elementos
+  width: 100%;
+  margin: 1rem 0 0 0; // Ajusta según tu diseño
+}
+
+@media (min-width: 600px) {
+  .line-break {
+    display: inline;
+  }
+}
+
+.connect-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1.0rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 1.3s ease;
+  gap: 0.8rem;
+  backdrop-filter: blur(10px); /* efecto de fondo tipo vidrio */
+}
+
+.connect-button .icon {
+  display: inline-block;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #dedce0;
+  color: #000;
+}
+
+.connect-button:hover .icon {
+  background-color: #dedce0;
+  color: #000;
+  transform: scale(1.05);
+}
